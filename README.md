@@ -85,7 +85,7 @@ $$min_{u_{0:H-1}, sT, sRH}  Σ_{k=0}^{H-1} [ wT * vio_Tin(x_k)^2 + wRH * vio_RH(
 
 
 
-This matches the MPCRL spirit: MPC explicitly balances constraint satisfaction and resource efficiency, while remaining interpretable and constraint-aware. ([arXiv][1])
+This matches the MPCRL spirit: MPC explicitly balances constraint satisfaction and resource efficiency, while remaining interpretable and constraint-aware. [MALLICK2025100751](https://doi.org/10.1016/j.atech.2024.100751)
 
 ### Lightweight “Rational RL-MPC” update (TD-style, small parameter vector)
 
@@ -105,7 +105,7 @@ $$
 θ ← θ - α δ_k φ_k
 $$
 
-This keeps learning overhead minimal while still being grounded in RL/TD principles—more “rational” than ad-hoc weight nudging, and closer in intent to MPCRL-style adaptation. ([arXiv][1])
+This keeps learning overhead minimal while still being grounded in RL/TD principles—more “rational” than ad-hoc weight nudging, and closer in intent to MPCRL-style adaptation. [MALLICK2025100751](https://doi.org/10.1016/j.atech.2024.100751)
 
 ---
 
@@ -185,5 +185,5 @@ The training/validation scripts can load an hourly OpenWeather CSV (e.g., 2022) 
 
 * Samuel Mallick, Filippo Airaldi, Azita Dabiri, Congcong Sun, Bart De Schutter. *Reinforcement learning-based model predictive control for greenhouse climate control*. Smart Agricultural Technology (2025), Vol. 10, 100751. ([TU Delft Research Portal][2])
 * MPCRL greenhouse reference implementation (godspeed branch). ([GitHub][3])
-* Preprint: *Reinforcement Learning-based Model Predictive Control for Greenhouse Climate Control* (arXiv). ([arXiv][1])
+* Preprint: *Reinforcement Learning-based Model Predictive Control for Greenhouse Climate Control* (arXiv). [MALLICK2025100751](https://doi.org/10.1016/j.atech.2024.100751)
 
