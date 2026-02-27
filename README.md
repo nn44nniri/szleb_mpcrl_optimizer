@@ -18,7 +18,7 @@ However, instead of the policy of this paper, we have used the policy of Nauta, 
 [My thesis:Mansoorali Amiri (2025) Towards intelligent digital twins in agriculture in controlled environments: joint contributions in fruit detection by vision and trans-domain simulation.](https://doi.org/10.71781/310)
 
 
-
+![Graph report](images/RL_szleb_mpc_diagram.png)
 ---
 
 ## Objectives
