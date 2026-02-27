@@ -61,9 +61,9 @@ We use a compact controller state and disturbances:
 
 To keep computation low, the internal predictor is a small linear model learned online via Recursive Least Squares (RLS):
 
-```text
+$$
 x_{k+1} ≈ Θ · [ x_k ; u_k ; z_k ; 1 ]
-```
+$$
 
 This model is not meant to be a perfect greenhouse physics model; it is a compact “control-oriented” predictor that MPC can use quickly.
 
@@ -73,14 +73,14 @@ At each step, MPC computes a control sequence by minimizing weighted violations 
 
 * **Soft constraints (slacks)** are used to keep the optimization feasible even when setpoints are temporarily unreachable:
 
-```text
+$$
 Tin_k ∈ [Tin_lo - sT_k, Tin_hi + sT_k],   sT_k ≥ 0
 RHin_k ∈ [RH_lo - sRH_k, RH_hi + sRH_k], sRH_k ≥ 0
-```
+$$
 
 * **Objective (illustrative)**:
 
-```text
+$$
 min_{u_{0:H-1}, sT, sRH}  Σ_{k=0}^{H-1} [
     wT * vio_Tin(x_k)^2
   + wRH * vio_RH(x_k)^2
@@ -89,7 +89,7 @@ min_{u_{0:H-1}, sT, sRH}  Σ_{k=0}^{H-1} [
   + wSRH * sRH_k^2
   + wΔu * ||u_k - u_{k-1}||^2
 ]
-```
+$$
 
 This matches the MPCRL spirit: MPC explicitly balances constraint satisfaction and resource efficiency, while remaining interpretable and constraint-aware. ([arXiv][1])
 
