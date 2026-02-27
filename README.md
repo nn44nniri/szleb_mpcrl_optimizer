@@ -15,7 +15,7 @@ This library combines both: **MPC remains the “policy”**, while a lightweigh
 
 However, instead of the policy of this paper, we have used the policy of Nauta, A et al. (2024) which is available in the szleb climate prediction library on my GitHub. This integration is a move towards a Trans-domain digital twin that I designed in my thesis. However, in the new approach, due to some problems that existed in the implementation of that thesis, instead of using a single optimizer, I plan to use two optimizers. In the previous approach, we used two domain-specific simulators managed by an optimizer and an estimator, we plan to use two optimizers and an estimator that have the optimizer and simulators embedded within themselves. 
 
-[My thesis:Mansoorali Amiri (2025) Towards intelligent digital twins in agriculture in controlled environments: joint contributions in fruit detection by vision and cross-domain simulation.](https://doi.org/10.71781/310)
+[My thesis:Mansoorali Amiri (2025) Towards intelligent digital twins in agriculture in controlled environments: joint contributions in fruit detection by vision and trans-domain simulation.](https://doi.org/10.71781/310)
 
 
 
@@ -45,7 +45,7 @@ We use a compact controller state and disturbances:
 
 * **State** (used by MPC + learning):
 
-  * `x_k = [Tin_k, RHin_k]ᵀ`
+  * $x_k = [Tin_k, RHin_k]^T$
   * Extracted from SZLEB `info["current_row_output"]` (e.g., `Tin_final_C`, `RHin_final_pct`) rather than assuming a raw observation layout.
 
 * **Action**:
@@ -54,8 +54,8 @@ We use a compact controller state and disturbances:
 
 * **Disturbance / exogenous features**:
 
-  * `z_k = [Tout_k, RHout_k, Gsun_k, LAI_k]ᵀ`
-  * In the OpenWeather-driven runs, `Gsun_k` is a simple proxy derived from cloud cover; LAI can be a schedule or a simple ramp.
+  * $z_k = [Tout_k, RHout_k, Gsun_k, LAI_k]^T$`
+  * In the OpenWeather-driven runs, $Gsun_k$ is a simple proxy derived from cloud cover; LAI can be a schedule or a simple ramp.
 
 ### Learned prediction model (fast online identification)
 
