@@ -12,6 +12,11 @@ Greenhouse climate control is difficult because the real system is nonlinear and
 
 This library combines both: **MPC remains the “policy”**, while a lightweight RL update improves a small set of parameters online/offline. This design is inspired by the MPCRL greenhouse work by Mallick et al., which learns MPC parametrization (model/cost/constraints) from data to improve climate performance under uncertainty. ([arXiv][1])
 
+However, instead of the policy of this paper, we have used the policy of Nauta, A et al. (2024) which is available in the szleb climate prediction library on my GitHub. This integration is a move towards a Trans-domain digital twin that I designed in my thesis. However, in the new approach, due to some problems that existed in the implementation of that thesis, instead of using a single optimizer, I plan to use two optimizers. In the previous approach, we used two domain-specific simulators managed by an optimizer and an estimator, we plan to use two optimizers and an estimator that have the optimizer and simulators embedded within themselves. 
+[My thesis:Mansoorali Amiri (2025) Towards intelligent digital twins in agriculture in controlled environments: joint contributions in fruit detection by vision and cross-domain simulation.](https://doi.org/10.71781/310)
+
+
+
 ---
 
 ## Objectives
