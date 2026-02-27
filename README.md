@@ -95,15 +95,15 @@ Instead of training a large neural policy, we adapt a **small set of MPC weights
 * Define a simple value approximation `V(x_k) = θᵀ φ_k`.
 * Use TD error:
 
-```text
+$$
 δ_k = c_k + γ V(x_{k+1}) - V(x_k)
-```
+$$
 
 * Update a small parameter vector (mapped to MPC weights):
 
-```text
+$$
 θ ← θ - α δ_k φ_k
-```
+$$
 
 This keeps learning overhead minimal while still being grounded in RL/TD principles—more “rational” than ad-hoc weight nudging, and closer in intent to MPCRL-style adaptation. ([arXiv][1])
 
