@@ -182,7 +182,11 @@ The training/validation scripts can load an hourly OpenWeather CSV (e.g., 2022) 
   5. energy split
   6. prediction accuracy + band satisfaction
 
+
+![Graph report](images/best_window_003.png)
 ---
+
+
 
 ## References
 
