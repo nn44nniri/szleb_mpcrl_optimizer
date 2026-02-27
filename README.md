@@ -45,7 +45,7 @@ We use a compact controller state and disturbances:
 
 * **State** (used by MPC + learning):
 
-  * $x_k = [Tin_k, RHin_k]^T$
+  * $$x_k = [Tin_k, RHin_k]^T$$
   * Extracted from SZLEB `info["current_row_output"]` (e.g., `Tin_final_C`, `RHin_final_pct`) rather than assuming a raw observation layout.
 
 * **Action**:
