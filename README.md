@@ -91,8 +91,8 @@ This matches the MPCRL spirit: MPC explicitly balances constraint satisfaction a
 
 Instead of training a large neural policy, we adapt a **small set of MPC weights** using a lightweight TD(0)-style update. Conceptually:
 
-* Define a compact feature vector `φ_k` (e.g., violation², energy, slack²).
-* Define a simple value approximation `V(x_k) = θᵀ φ_k`.
+* Define a compact feature vector $φ_k$ (e.g., violation², energy, slack²).
+* Define a simple value approximation $V(x_k) = θ^T φ_k$.
 * Use TD error:
 
 $$
