@@ -81,7 +81,7 @@ $$
 * **Objective (illustrative)**:
 
 
-$min_{u_{0:H-1}, sT, sRH}  Σ_{k=0}^{H-1} [
+$$min_{u_{0:H-1}, sT, sRH}  Σ_{k=0}^{H-1} [
     wT * vio_Tin(x_k)^2
   + wRH * vio_RH(x_k)^2
   + wE * ||u_k||^2
@@ -89,6 +89,17 @@ $min_{u_{0:H-1}, sT, sRH}  Σ_{k=0}^{H-1} [
   + wSRH * sRH_k^2
   + wΔu * ||u_k - u_{k-1}||^2
 ]$
+
+$$
+\min_{u_{0:H-1}, sT, sRH} \sum_{k=0}^{H-1} \left[ 
+    w_T \cdot \text{vio\_Tin}(x_k)^2 
+    + w_{RH} \cdot \text{vio\_RH}(x_k)^2 
+    + w_E \cdot \|u_k\|^2 
+    + w_{ST} \cdot sT_k^2 
+    + w_{SRH} \cdot sRH_k^2 
+    + w_{\Delta u} \cdot \|u_k - u_{k-1}\|^2 
+\right]
+$$
 
 This matches the MPCRL spirit: MPC explicitly balances constraint satisfaction and resource efficiency, while remaining interpretable and constraint-aware. ([arXiv][1])
 
