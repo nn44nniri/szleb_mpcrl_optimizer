@@ -50,11 +50,11 @@ We use a compact controller state and disturbances:
 
 * **Action**:
 
-  * `u_k` is the actuator command vector (heater / fan / vents, depending on SZLEB-v0’s action space).
+  * $$u_k$$ is the actuator command vector (heater / fan / vents, depending on SZLEB-v0’s action space).
 
 * **Disturbance / exogenous features**:
 
-  * $z_k = [Tout_k, RHout_k, Gsun_k, LAI_k]^T$`
+  * $$z_k = [Tout_k, RHout_k, Gsun_k, LAI_k]^T$$
   * In the OpenWeather-driven runs, $Gsun_k$ is a simple proxy derived from cloud cover; LAI can be a schedule or a simple ramp.
 
 ### Learned prediction model (fast online identification)
